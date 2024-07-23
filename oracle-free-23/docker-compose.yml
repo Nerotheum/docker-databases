@@ -9,19 +9,13 @@ services:
       # ...volume for the database and required database configuration files
       - oradata:/opt/oracle/oradata
 
-      # ...directory containing either shell or SQL scripts that are executed once after the database setup has been completed
-      - ./scripts/setup:/opt/oracle/scripts/setup
-      
-      # ...directory containing either shell or SQL scripts that are executed every time the container starts
-      - ./scripts/startup:/opt/oracle/scripts/startup
-
       # ...directory containing db import- and export scripts
       - ./scripts/dump:/opt/oracle/scripts/dump
 
       #...a place to put data into the running container if needed
       - ./shared:/shared
     environment:
-      - ORACLE_PWD=oracle
+      - ORACLE_PWD=1234
       - ORACLE_CHARACTERSET=AL32UTF8
     ports:
       - 1521:1521

@@ -15,7 +15,7 @@ clean-docker:
 
 # Enter sql
 enter-sql:
-	docker exec -it mariadb mysql -u root -p
+	docker exec -it mariadb mysql -uroot -p1234
 
 # Import dump
 db-import:

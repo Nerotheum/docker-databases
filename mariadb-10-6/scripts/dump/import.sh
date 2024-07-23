@@ -2,14 +2,10 @@
 
 DUMP_DIR="/shared/dumps/import"
 
-echo Running import script
-echo Enter mysql user:
-read mysql_user
-echo Enter mysql user password:
-read -s mysql_user_pw
+echo Running import script (as root)
 echo Enter database name:
 read mysql_db
 echo Enter dump name:
 read dump
 
-mysql -u"$mysql_user" -p"$mysql_user_pw" "$mysql_db" < "$DUMP_DIR/$dump"
+mysql -uroot -p1234 "$mysql_db" < "$DUMP_DIR/$dump"
