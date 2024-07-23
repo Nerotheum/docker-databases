@@ -6,11 +6,6 @@ services:
     container_name: db
     image: mariadb:10.6
     command: --default-authentication-plugin=mysql_native_password
-    environment:
-      - MYSQL_ROOT_PASSWORD=your-root-pw
-      - MYSQL_USER=your-mysql-user
-      - MYSQL_PASSWORD=your-mysql-user-pw
-      - MYSQL_DATABASE=your-initial-db
     volumes:
       # ...volume for the database
       - mysqldata:/var/lib/mysql
@@ -18,10 +13,18 @@ services:
       # ...path to custom MySQL configuration files
       - ./conf.d:/etc/mysql/conf.d
 
-      # ...folder containing initial database dumps to populate the database
+      # ...folder containing initial database dumps to populate the initial database
       - ./dumps:/docker-entrypoint-initdb.d
+
+      # ...directory containing db import- and export scripts
+      - ./scripts/dump:/opt/mysql/scripts/dump
 
       # ...a place to put data into the running container if needed
       - ./shared:/shared
+    environment:
+      - MYSQL_ROOT_PASSWORD=your-root-pw
+      - MYSQL_USER=your-mysql-user
+      - MYSQL_PASSWORD=your-mysql-user-pw
+      - MYSQL_DATABASE=your-initial-db
     ports:
       - 3306:3306
