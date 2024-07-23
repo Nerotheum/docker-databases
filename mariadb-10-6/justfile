@@ -1,0 +1,26 @@
+set windows-powershell := true
+
+# List available commands
+default:
+	@just --List
+
+# Start docker container
+start-docker:
+	docker-compose up
+
+# Remove docker container
+clean-docker:
+	docker-compose down
+	docker volume rm mariadb-10-6_mysqldata
+
+# Enter sql
+enter-sql:
+	docker exec -it mariadb mysql -u root -p
+
+# Import dump
+db-import:
+	docker exec -it mariadb /opt/mysql/scripts/dump/import.sh
+
+# Export dump
+db-export:
+	docker exec -it mariadb /opt/mysql/scripts/dump/export.sh

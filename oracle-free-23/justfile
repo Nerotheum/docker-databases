@@ -15,12 +15,12 @@ clean-docker:
 
 # Enter sqlplus
 enter-sqlplus:
-	docker exec -it db sqlplus sys/oracle@localhost:1521/FREEPDB1 as sysdba
+	docker exec -it oracle sqlplus sys/oracle@localhost:1521/FREEPDB1 as sysdba
 
 # Import dump
 db-import:
-	docker exec -it db /opt/oracle/scripts/dump/import.sh
+	docker exec -it oracle /opt/oracle/scripts/dump/import.sh
 
 # Export dump
 db-export:
-	docker exec -it db /opt/oracle/scripts/dump/export.sh
+	docker exec -it oracle /opt/oracle/scripts/dump/export.sh
