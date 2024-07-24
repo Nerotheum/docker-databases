@@ -1,5 +1,5 @@
 volumes:
-  mysqldata:
+  mariadbdata:
 
 services:
   db:
@@ -8,10 +8,10 @@ services:
     command: --default-authentication-plugin=mysql_native_password
     volumes:
       # ...volume for the database
-      - mysqldata:/var/lib/mysql
+      - mariadbdata:/var/lib/mysql
 
       # ...directory containing db import- and export scripts
-      - ./scripts/dump:/opt/mysql/scripts/dump
+      - ./scripts:/opt/mysql/scripts
 
       # ...a place to put data into the running container if needed
       - ./shared:/shared

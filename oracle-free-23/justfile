@@ -19,8 +19,8 @@ enter-sqlplus:
 
 # Import dump
 db-import:
-	docker exec -it oracle /opt/oracle/scripts/dump/import.sh
+	docker exec -it oracle /opt/oracle/scripts/db-import.sh
 
 # Export dump
 db-export:
-	docker exec -it oracle /opt/oracle/scripts/dump/export.sh
+	docker exec -it oracle /opt/oracle/scripts/db-export.sh

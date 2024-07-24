@@ -13,14 +13,14 @@ clean-docker:
 	docker-compose down
 	docker volume rm mariadb-10-6_mysqldata
 
-# Enter sql
-enter-sql:
+# Enter mysql
+enter-mysql:
 	docker exec -it mariadb mysql -uroot -p1234
 
-# Import dump
-db-import:
-	docker exec -it mariadb /opt/mysql/scripts/dump/import.sh
+# Execute sql script
+db-execute:
+	docker exec -it mariadb /opt/mysql/scripts/db-execute.sh
 
 # Export dump
 db-export:
-	docker exec -it mariadb /opt/mysql/scripts/dump/export.sh
+	docker exec -it mariadb /opt/mysql/scripts/db-export.sh

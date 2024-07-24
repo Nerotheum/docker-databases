@@ -1,18 +1,21 @@
 # MariaDB 10.6
 
 ## Getting started
-Run 'just start-docker' within a terminal and wait until the database server is ready to use.
+1. Create directories shared/exports and shared/scripts within this folder
+2. Run 'just start-docker' and wait until the database server is ready to use
 
 ## Credentials
+The database server will be available on 127.0.0.1:3306.
 There are two built in users with the following credentials:
 - username: root, password: 1234
 - username: user, password: 1234
 
-## Importing a database
-Place the dump that you'd like to import within the shared/dumps/import folder. After that run 'just import-db' and follow the instructions printed on the console.
+## Executing sql scripts
+Place the sql script that you'd like to execute within the shared/scripts folder. After that run 'just db-execute' and follow the instructions printed on the console.
 
 ## Exporting a database
-Run 'just export-db' and follow the instructions printed on the console.
+Run 'just db-export' and follow the instructions printed on the console. The dump will then be
+created within the shared/exports folder.
 
 ## Accessing the mysql shell
 Run 'just enter-mysql'.

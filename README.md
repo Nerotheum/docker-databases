@@ -1,5 +1,6 @@
 # Docker Databases
-A collection of databases that are easy to setup using docker-compose and just.
+A collection of databases that are easy to setup using docker-compose and just
+for local development purposes.
 
 ## Prerequisites
 - Docker and docker-compose

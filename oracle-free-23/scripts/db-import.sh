@@ -1,5 +1,7 @@
 #!/bin/bash
 
+IMPORT_DIR="/shared/imports"
+
 echo Running import script
 echo Enter schema:
 read schema_user
