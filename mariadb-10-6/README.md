@@ -1,8 +1,7 @@
 # MariaDB 10.6
 
 ## Getting started
-1. Create directories shared/exports and shared/scripts within this folder
-2. Run 'just start-docker' and wait until the database server is ready to use
+Run 'just start-docker' and wait until the database server is ready to use.
 
 ## Credentials
 The database server will be available on 127.0.0.1:3306.
