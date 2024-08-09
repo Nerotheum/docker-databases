@@ -24,3 +24,7 @@ db-import:
 # Export dump
 db-export:
 	docker exec -it oracle /opt/oracle/scripts/db-export.sh
+	
+# Execute sql script
+db-execute:
+	docker exec -it oracle /opt/oracle/scripts/db-execute.sh

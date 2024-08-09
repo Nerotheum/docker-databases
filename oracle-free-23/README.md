@@ -15,5 +15,9 @@ Place the dump that you'd like to import within the shared/imports folder. After
 Run 'just db-export' and follow the instructions printed on the console. The dump will then be
 created within the shared/exports folder.
 
+## Executing a sql script
+Place the dump that you'd like to execute within shared/sqls folder. After that run 'just
+db-execute' and follow the instructions printed on the consolee.
+
 ## Accessing sqlplus
 Run 'just enter-sqlplus'.
