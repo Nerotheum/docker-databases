@@ -17,14 +17,14 @@ clean-docker:
 enter-sqlplus:
 	docker exec -it oracle sqlplus sys/1234@localhost:1521/FREEPDB1 as sysdba
 
+# Execute sql script
+execute-sql:
+	docker exec -it oracle /opt/oracle/scripts/sql/execute.sh
+
 # Import dump
-db-import:
-	docker exec -it oracle /opt/oracle/scripts/db-import.sh
+import-dump:
+	docker exec -it oracle /opt/oracle/scripts/dump/import.sh
 
 # Export dump
-db-export:
-	docker exec -it oracle /opt/oracle/scripts/db-export.sh
-	
-# Execute sql script
-db-execute:
-	docker exec -it oracle /opt/oracle/scripts/db-execute.sh
+export-dump:
+	docker exec -it oracle /opt/oracle/scripts/dump/export.sh

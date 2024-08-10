@@ -18,9 +18,9 @@ enter-mysql:
 	docker exec -it mariadb mysql -uroot -p1234
 
 # Execute sql script
-db-execute:
-	docker exec -it mariadb /opt/mysql/scripts/db-execute.sh
+execute-sql:
+	docker exec -it mariadb /opt/mysql/scripts/sql/execute.sh
 
 # Export dump
-db-export:
-	docker exec -it mariadb /opt/mysql/scripts/db-export.sh
+export-dump:
+	docker exec -it mariadb /opt/mysql/scripts/dump/export.sh

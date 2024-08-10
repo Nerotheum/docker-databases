@@ -10,10 +10,10 @@ There are two built in users with the following credentials:
 - username: user, password: 1234
 
 ## Executing sql scripts
-Place the sql script that you'd like to execute within the shared/scripts folder. After that run 'just db-execute' and follow the instructions printed on the console.
+Place the sql script that you'd like to execute within the shared/scripts folder. After that run 'just execute-sql' and follow the instructions printed on the console.
 
 ## Exporting a database
-Run 'just db-export' and follow the instructions printed on the console. The dump will then be
+Run 'just export-dump' and follow the instructions printed on the console. The dump will then be
 created within the shared/exports folder.
 
 ## Accessing the mysql shell
