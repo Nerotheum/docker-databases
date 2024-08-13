@@ -9,7 +9,7 @@ services:
       # ...volume for the database and required database configuration files
       - oradata:/opt/oracle/oradata
 
-      # ...directory containing db import- and export scripts
+      # ...directory containing db import, export and execute scripts
       - ./scripts:/opt/oracle/scripts
 
       #...a place to put data into the running container if needed

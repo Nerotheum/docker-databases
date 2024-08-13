@@ -10,7 +10,7 @@ services:
       # ...volume for the database
       - mariadbdata:/var/lib/mysql
 
-      # ...directory containing db import- and export scripts
+      # ...directory containing db import, export and execute scripts
       - ./scripts:/opt/mysql/scripts
 
       # ...a place to put data into the running container if needed

@@ -10,7 +10,7 @@ There is one built in user with the following credentials:
 
 ## Executing a sql script
 Place the sql script that you'd like to execute within shared/sqls folder. After that run 'just
-execute-sql' and follow the instructions printed on the consolee.
+execute-sql' and follow the instructions printed on the console.
 
 ## Importing a database
 Place the dump that you'd like to import within the shared/imports folder. After that run 'just import-dump' and follow the instructions printed on the console.
